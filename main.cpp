@@ -16,9 +16,7 @@ int main (){
     indent -= countChar(temp,'}');
     for (int i=0; i<indent; i++){
       goodCode += "\t";
-      std::cout << "yep" << std::endl;
     }
-    std::cout << goodCode << std::endl;
     goodCode += removeLeadingSpaces(temp) + "\n";
     indent += countChar(temp,'{');
   }

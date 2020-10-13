@@ -12,7 +12,13 @@ int main (){
   std::string goodCode;
   std::string temp;
   while (getline(in_file, temp)){
-    goodCode += removeLeadingSpaces(temp) + "\n";
+    //for (int i=0; i<countChar(temp, '{'), i++){
+    //  goodCode += "\t";
+    //}
+    //goodCode += removeLeadingSpaces(temp) + "\n";
+    //for(int i=0; i<temp.length(); i++){
+    //  goodCode += removeLeadingSpaces(temp[i])+"\n";
+    //}
   }
   std::cout << goodCode;
 }

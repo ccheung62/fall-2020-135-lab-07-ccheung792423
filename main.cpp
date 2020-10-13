@@ -23,4 +23,11 @@ int main (){
     indent += countChar(temp,'{');
   }
   std::cout << goodCode;
+  std::ofstream out_file ("good-code.cpp");
+  if (out_file.fail()){
+    std::cerr << "File cannot be open for reading." << std::endl;
+    exit(1);
+  }
+  out_file << goodCode;
+  out_file.close();
 }

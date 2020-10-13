@@ -9,16 +9,18 @@ int main (){
     std::cerr << "File cannot be opened for reading." << std::endl;
     exit(1);
   }
-  std::string goodCode;
+  std::string goodCode = "";
   std::string temp;
+  int indent = 0;
   while (getline(in_file, temp)){
-    //for (int i=0; i<countChar(temp, '{'), i++){
-    //  goodCode += "\t";
-    //}
-    //goodCode += removeLeadingSpaces(temp) + "\n";
-    //for(int i=0; i<temp.length(); i++){
-    //  goodCode += removeLeadingSpaces(temp[i])+"\n";
-    //}
+    indent -= countChar(temp,'}');
+    for (int i=0; i<indent; i++){
+      goodCode += "\t";
+      std::cout << "yep" << std::endl;
+    }
+    std::cout << goodCode << std::endl;
+    goodCode += removeLeadingSpaces(temp) + "\n";
+    indent += countChar(temp,'{');
   }
   std::cout << goodCode;
 }

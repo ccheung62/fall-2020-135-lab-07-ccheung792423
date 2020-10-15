@@ -6,7 +6,7 @@
 
 * GitHub username:ccheung792423
 
-* Notes:
+* Notes: Task A and B functions are in funcs.cpp. Main.cpp prints out the formatted code.
 
 
   
